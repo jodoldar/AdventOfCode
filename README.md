@@ -2,11 +2,12 @@
 Advent of Code repository for the 2021 edition
 
 ##  Current status:
-- **Day 1**: :heavy_check_mark:
+- **Day 1**: Done with C++ :heavy_check_mark:
     - Part 1 -> Line by line file processing and parsing.
     - Part 2-> Usage of a `vector` to find the triplets.
 
- - **Day 2**: :x:
+ - **Day 2**: Done with JavaScript (Node.js) :heavy_check_mark:
+    - Part 1 & 2 -> Used `readline` module for a line-by-line processing.
  - **Day 3**: :x:
  - **Day 4**: :x:
  - **Day 5**: :x:
