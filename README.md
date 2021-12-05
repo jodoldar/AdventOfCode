@@ -10,7 +10,7 @@ Advent of Code repository for the 2021 edition
     - Part 1 & 2 -> Used `readline` module for a line-by-line processing.
 
  - **Day 3**: Done with C++ :heavy_check_mark:
-    - Part 1 & 2 -> Usage of `acumulate` to simulate fold operations.
+    - Part 1 & 2 -> Usage of `accumulate` to simulate fold operations.
 
  - **Day 4**: :x:
  - **Day 5**: :x:
