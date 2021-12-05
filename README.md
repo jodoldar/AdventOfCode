@@ -12,7 +12,9 @@ Advent of Code repository for the 2021 edition
  - **Day 3**: Done with C++ :heavy_check_mark:
     - Part 1 & 2 -> Usage of `accumulate` to simulate fold operations.
 
- - **Day 4**: :x:
+ - **Day 4**: Done with C++ :heavy_check_mark:
+    - Part 1 & 2 -> Usage of a class to manage each of the _bingo_ cardboards.
+
  - **Day 5**: :x:
  - **Day 6**: :x:
  - **Day 7**: :x:
