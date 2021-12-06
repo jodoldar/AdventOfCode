@@ -186,7 +186,7 @@ void VentMap::toPgmFile(string filename)
         {
             for (size_t iCol = 0; iCol < 999; iCol++)
             {
-                oImageFile << occurrences[iRow][iCol] << " ";
+                oImageFile << max_elem - occurrences[iRow][iCol] << " ";
             }
             oImageFile << endl;
         }
