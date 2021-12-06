@@ -20,7 +20,10 @@ Advent of Code repository for the 2021 edition
 
    <img src="https://github.com/jodoldar/AoC-2021/blob/b30dd50a8938e03aec6785d6951b4cc51e5f0ce1/Day%205/vent_map.png?raw=true" alt="map_image" width="400">
 
- - **Day 6**: :x:
+ - **Day 6**: Done with C++ :heavy_check_mark:
+    - Part 1 -> Simple simulation of each individual.
+    - Part 2 -> Instead of individual management, uses like a 8-state machine to store how many elements have an specific state.
+
  - **Day 7**: :heavy_minus_sign:
  - **Day 8**: :heavy_minus_sign:
  - **Day 9**: :heavy_minus_sign:
