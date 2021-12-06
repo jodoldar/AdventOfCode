@@ -15,7 +15,11 @@ Advent of Code repository for the 2021 edition
  - **Day 4**: Done with C++ :heavy_check_mark:
     - Part 1 & 2 -> Usage of a class to manage each of the _bingo_ cardboards.
 
- - **Day 5**: :x:
+ - **Day 5**: Done with C++ :heavy_check_mark:
+    - Part 1 & 2 -> Usage of a class to manage the map. Result of Part 2 with an image for fun.
+
+   <img src="https://github.com/jodoldar/AoC-2021/blob/c34dd9f5acba5d527f8f4060d611a7e511ec9dbb/Day%205/vent_map.png?raw=true" alt="map_image" width="400">
+
  - **Day 6**: :x:
  - **Day 7**: :heavy_minus_sign:
  - **Day 8**: :heavy_minus_sign:
