@@ -24,7 +24,10 @@ Advent of Code repository for the 2021 edition
     - Part 1 -> Simple simulation of each individual.
     - Part 2 -> Instead of individual management, uses like a 8-state machine to store how many elements have an specific state.
 
- - **Day 7**: :heavy_minus_sign:
+ - **Day 7**: Done with C++ :heavy_check_mark:
+    - Part 1 -> Usage of `nth_element` to obtain the median.
+    - Part 2 -> Usage of `accumulate` to help with the average of the positions.
+
  - **Day 8**: :heavy_minus_sign:
  - **Day 9**: :heavy_minus_sign:
  - **Day 10**: :heavy_minus_sign:
