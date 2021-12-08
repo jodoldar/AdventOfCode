@@ -64,6 +64,7 @@ int getAcumulator(int difference)
 
     return iAcumulated;
 }
+
 int main(int argc, char const *argv[])
 {
     vector<int> vPositions;

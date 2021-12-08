@@ -12,6 +12,7 @@
         "*.tcc": "cpp",
         "string": "cpp",
         "deque": "cpp",
-        "numeric": "cpp"
+        "numeric": "cpp",
+        "ostream": "cpp"
     }
 }
