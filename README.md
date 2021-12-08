@@ -32,6 +32,8 @@ Advent of Code repository for the 2021 edition
     - Part 1 -> Done with JavaScript, like _Day 2_.
     - Part 2 -> Done with C++. Hardcoded step-by-step process to decode the alphabet for each line.
     
+    <img src="https://github.com/jodoldar/AoC-2021/blob/84e228dc1024a28a18729ee6c31c2aee43736982/Day%208/numbers.png?raw=true" alt="map_image" width="400">
+    
  - **Day 9**: :heavy_minus_sign:
  - **Day 10**: :heavy_minus_sign:
  - **Day 11**: :heavy_minus_sign:
