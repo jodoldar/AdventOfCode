@@ -1,6 +1,6 @@
 /**
  * @file part1.cpp
- * @author Josep Dols (jododlar@gmail.com)
+ * @author Josep Dols (jodoldar@gmail.com)
  * @brief Day 7 - Part 1 of the Advent of Code 2021
  * @version 0.1
  * @date 2021-12-07
