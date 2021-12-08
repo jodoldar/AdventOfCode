@@ -17,8 +17,9 @@ Advent of Code repository for the 2021 edition
 
  - **Day 5**: Done with C++ :heavy_check_mark:
     - Part 1 & 2 -> Usage of a class to manage the map. Result of Part 2 with an image for fun.
-
+<br/>
    <img src="https://github.com/jodoldar/AoC-2021/blob/b30dd50a8938e03aec6785d6951b4cc51e5f0ce1/Day%205/vent_map.png?raw=true" alt="map_image" width="400">
+<br/>
 
  - **Day 6**: Done with C++ :heavy_check_mark:
     - Part 1 -> Simple simulation of each individual.
@@ -30,10 +31,11 @@ Advent of Code repository for the 2021 edition
 
  - **Day 8**: Done with JavaScript & C++ :heavy_check_mark:
     - Part 1 -> Done with JavaScript, like _Day 2_.
-    - Part 2 -> Done with C++. Hardcoded step-by-step process to decode the alphabet for each line.
-    
+    - Part 2 -> Done with C++. Hardcoded step-by-step process to decode the alphabet for each line.   
+<br/>
     <img src="https://github.com/jodoldar/AoC-2021/blob/84e228dc1024a28a18729ee6c31c2aee43736982/Day%208/numbers.png?raw=true" alt="map_image" width="400">
-    
+<br/>
+
  - **Day 9**: :heavy_minus_sign:
  - **Day 10**: :heavy_minus_sign:
  - **Day 11**: :heavy_minus_sign:
