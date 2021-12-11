@@ -43,7 +43,10 @@ Advent of Code repository for the 2021 edition
     <img src="https://github.com/jodoldar/AoC-2021/blob/99877765204134b9d131b94b487d9ca206b4e2fe/Day%209/anim.gif?raw=true" alt="basis_image" width="400">
 <br/>
 
- - **Day 10**: :interrobang:
+ - **Day 10**: Done with C++ :heavy_check_mark:
+    - Part 1 -> Usage of `stack` container to manage the lines (not recursive).
+    - Part 2 -> Same as Part 1 and reusing the _middle_ functionality of Day 7.
+
  - **Day 11**: :interrobang:
  - **Day 12**: :heavy_minus_sign:
  - **Day 13**: :heavy_minus_sign:
