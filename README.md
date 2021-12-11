@@ -36,9 +36,15 @@ Advent of Code repository for the 2021 edition
     <img src="https://github.com/jodoldar/AoC-2021/blob/84e228dc1024a28a18729ee6c31c2aee43736982/Day%208/numbers.png?raw=true" alt="map_image" width="400">
 <br/>
 
- - **Day 9**: :heavy_minus_sign:
- - **Day 10**: :heavy_minus_sign:
- - **Day 11**: :heavy_minus_sign:
+ - **Day 9**: Done with C++ :heavy_check_mark:
+    - Part 1 & 2 -> Usage of classes to manage the _basis_ changes.
+
+<br/>
+    <img src="https://github.com/jodoldar/AoC-2021/blob/99877765204134b9d131b94b487d9ca206b4e2fe/Day%209/anim.gif?raw=true" alt="basis_image" width="400">
+<br/>
+
+ - **Day 10**: :interrobang:
+ - **Day 11**: :interrobang:
  - **Day 12**: :heavy_minus_sign:
  - **Day 13**: :heavy_minus_sign:
  - **Day 14**: :heavy_minus_sign:
