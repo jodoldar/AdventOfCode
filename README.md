@@ -59,10 +59,10 @@ Advent of Code repository for the 2021 edition
 
 <br/>
 <p float="center">
-    <img src="https://github.com/jodoldar/AoC-2021/blob/0485748a54152519a2d8d8d787711e9505203277/Day%2012/images/sample.png?raw=true" alt="graph1" width="100" />
-    <img src="https://github.com/jodoldar/AoC-2021/blob/0485748a54152519a2d8d8d787711e9505203277/Day%2012/images/sample2.png?raw=true" alt="graph2" width="140" />
-    <img src="https://github.com/jodoldar/AoC-2021/blob/0485748a54152519a2d8d8d787711e9505203277/Day%2012/images/sample3.png?raw=true" alt="graph3" width="220" />
-    <img src="https://github.com/jodoldar/AoC-2021/blob/0485748a54152519a2d8d8d787711e9505203277/Day%2012/images/output.png?raw=true" alt="graph4" width="300" />
+    <img src="https://github.com/jodoldar/AoC-2021/blob/e34193d630ac79d87cacd7603535a9bb34171926/Day%2012/images/sample.png?raw=true" alt="graph1" width="100" />
+    <img src="https://github.com/jodoldar/AoC-2021/blob/e34193d630ac79d87cacd7603535a9bb34171926/Day%2012/images/sample2.png?raw=true" alt="graph2" width="140" />
+    <img src="https://github.com/jodoldar/AoC-2021/blob/e34193d630ac79d87cacd7603535a9bb34171926/Day%2012/images/sample3.png?raw=true" alt="graph3" width="220" />
+    <img src="https://github.com/jodoldar/AoC-2021/blob/e34193d630ac79d87cacd7603535a9bb34171926/Day%2012/images/output.png?raw=true" alt="graph4" width="300" />
 </p>
 <br/>
 
