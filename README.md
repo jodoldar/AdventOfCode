@@ -54,7 +54,9 @@ Advent of Code repository for the 2021 edition
     <img src="https://github.com/jodoldar/AoC-2021/blob/a5182b545d490505445cfe8474148f33622ae6ad/Day%2011/anim.gif?raw=true" alt="octopus_image" width="400">
 <br/>
 
- - **Day 12**: :interrobang:
+ - **Day 12**: Done with C++ :heavy_check_mark:
+    - Part 1 & 2 -> Recursive function to perform a custom DFS search in a graph.
+
  - **Day 13**: :heavy_minus_sign:
  - **Day 14**: :heavy_minus_sign:
  - **Day 15**: :heavy_minus_sign:
