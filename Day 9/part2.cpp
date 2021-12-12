@@ -1,5 +1,5 @@
 /**
- * @file part1.cpp
+ * @file part2.cpp
  * @author Josep Dols (jodoldar@gmail.com)
  * @brief Day 9 - Part 2 of the Advent of Code 2021
  * @version 0.1
