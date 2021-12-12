@@ -50,7 +50,10 @@ Advent of Code repository for the 2021 edition
  - **Day 11**: Done with C++ :heavy_check_mark:
     - Part 1 & 2 -> Mix of the Day 9 and Day 6 behaviour.
 
-    
+<br/>
+    <img src="https://github.com/jodoldar/AoC-2021/blob/a5182b545d490505445cfe8474148f33622ae6ad/Day%2011/anim.gif?raw=true" alt="octopus_image" width="400">
+<br/>
+
  - **Day 12**: :interrobang:
  - **Day 13**: :heavy_minus_sign:
  - **Day 14**: :heavy_minus_sign:
