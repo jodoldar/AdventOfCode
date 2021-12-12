@@ -58,10 +58,12 @@ Advent of Code repository for the 2021 edition
     - Part 1 & 2 -> Recursive function to perform a custom DFS search in a graph.
 
 <br/>
-    <img src="https://github.com/jodoldar/AoC-2021/blob/0485748a54152519a2d8d8d787711e9505203277/Day%2012/images/sample.png?raw=true" alt="graph1" width="100">
-    <img src="https://github.com/jodoldar/AoC-2021/blob/0485748a54152519a2d8d8d787711e9505203277/Day%2012/images/sample2.png?raw=true" alt="graph1" width="150">
-    <img src="https://github.com/jodoldar/AoC-2021/blob/0485748a54152519a2d8d8d787711e9505203277/Day%2012/images/sample3.png?raw=true" alt="graph1" width="200">
-    <img src="https://github.com/jodoldar/AoC-2021/blob/0485748a54152519a2d8d8d787711e9505203277/Day%2012/images/output.png?raw=true" alt="graph1" width="300">
+<p float="center">
+    <img src="https://github.com/jodoldar/AoC-2021/blob/0485748a54152519a2d8d8d787711e9505203277/Day%2012/images/sample.png?raw=true" alt="graph1" width="100" />
+    <img src="https://github.com/jodoldar/AoC-2021/blob/0485748a54152519a2d8d8d787711e9505203277/Day%2012/images/sample2.png?raw=true" alt="graph2" width="150" />
+    <img src="https://github.com/jodoldar/AoC-2021/blob/0485748a54152519a2d8d8d787711e9505203277/Day%2012/images/sample3.png?raw=true" alt="graph3" width="200" />
+    <img src="https://github.com/jodoldar/AoC-2021/blob/0485748a54152519a2d8d8d787711e9505203277/Day%2012/images/output.png?raw=true" alt="graph4" width="300" />
+</p>
 <br/>
 
  - **Day 13**: :heavy_minus_sign:
