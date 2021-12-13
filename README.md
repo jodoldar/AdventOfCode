@@ -66,7 +66,18 @@ Advent of Code repository for the 2021 edition
 </p>
 <br/>
 
- - **Day 13**: :heavy_minus_sign:
+ - **Day 13**: Done with C++ :heavy_check_mark:
+    - Part 1 & 2 -> Matrix with `vector` and a 2-way for loops to mirror the points.
+
+```
+   #··#·####·###··####·#··#··##··#··#·####·
+   #··#·#····#··#····#·#·#··#··#·#··#····#·
+   #··#·###··#··#···#··##···#··#·#··#···#··
+   #··#·#····###···#···#·#··####·#··#··#···
+   #··#·#····#·#··#····#·#··#··#·#··#·#····
+   ·##··#····#··#·####·#··#·#··#··##··####·
+```
+
  - **Day 14**: :heavy_minus_sign:
  - **Day 15**: :heavy_minus_sign:
  - **Day 16**: :heavy_minus_sign:
