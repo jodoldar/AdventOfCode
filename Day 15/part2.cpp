@@ -157,9 +157,10 @@ int main(int argc, char const *argv[])
 {
     vector<vector<Point>> oGraph;
     vector<vector<Point>> oGraphBig;
-    queue<Point*> qPointsToCheck;
-    Point* pLocal;
+    queue<Point> qPointsToCheck;
+    Point pLocal;
     string spaces{80, ' '};
+    int ATTEMPTS = 3;
 
     if (!siReadAndProcessInput("input.txt", oGraph))
     {
@@ -174,34 +175,33 @@ int main(int argc, char const *argv[])
         cout << "New graph size is " << oGraph.size() << "x" << oGraph[0].size() << endl;
 
         oGraph[0][0].distance = 0;
-        qPointsToCheck.push(&oGraph[0][0]);
+        qPointsToCheck.push(oGraph[0][0]);
 
-        while (!qPointsToCheck.empty())
+        for (size_t i = 0; i < ATTEMPTS; i++)
         {
-            pLocal = qPointsToCheck.front();
-            cout << "\r" << spaces << "\rPoints to check: " << qPointsToCheck.size() << flush;
-
-            for (auto &&point : (*pLocal).getAdjacents(oGraph))
+            for (size_t iX = 0; iX < oGraph.size(); iX++)
             {
-                //cout << "Checking for point " << point << endl;
-                if (oGraph[pLocal->X][pLocal->Y].distance + point.weight < point.distance)
+                for (size_t iY = 0; iY < oGraph[iX].size(); iY++)
                 {
-                    oGraph[point.X][point.Y].distance = oGraph[pLocal->X][pLocal->Y].distance + point.weight;
-                    //cout << "Point " << point << " new distance is " << oGraph[point.X][point.Y].distance << endl;
-                    oGraph[point.X][point.Y].orig = &oGraph[pLocal->X][pLocal->Y];
-                }
+                    cout << "\r" << spaces << "\rIn position: " << iX << "," << iY << flush;
 
-                if (!oGraph[point.X][point.Y].bVisited)
-                {
-                    oGraph[point.X][point.Y].bVisited = true;
-                    qPointsToCheck.push(&oGraph[point.X][point.Y]);
+                    if (iY < oGraph[iX].size()-1 && oGraph[iX][iY].distance + oGraph[iX][iY+1].weight < oGraph[iX][iY+1].distance)
+                        oGraph[iX][iY+1].distance = oGraph[iX][iY].distance + oGraph[iX][iY+1].weight;
+
+                    if (iX < oGraph.size()-1 && oGraph[iX][iY].distance + oGraph[iX+1][iY].weight < oGraph[iX+1][iY].distance)
+                        oGraph[iX+1][iY].distance = oGraph[iX][iY].distance + oGraph[iX+1][iY].weight;
+
+                    if (iX > 0 && oGraph[iX][iY].distance + oGraph[iX-1][iY].weight < oGraph[iX-1][iY].distance)
+                        oGraph[iX-1][iY].distance = oGraph[iX][iY].distance + oGraph[iX-1][iY].weight;
+
+                    if (iY > 0 && oGraph[iX][iY].distance + oGraph[iX][iY-1].weight < oGraph[iX][iY-1].distance)
+                        oGraph[iX][iY-1].distance = oGraph[iX][iY].distance + oGraph[iX][iY-1].weight;
                 }
             }
-
-            qPointsToCheck.pop();
         }
 
         cout << "\nDistance is " << oGraph.back().back().distance << endl;
+        cout << "At start is " << oGraph[0][0].distance << endl;
     }
     else
     {
