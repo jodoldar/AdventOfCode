@@ -116,13 +116,36 @@ vector<vector<Point>> expandGraph(vector<vector<Point>> oGraph)
     {
         for (size_t iLineX = 0; iLineX < iInitialXSize; iLineX++)
         {
-            auto it = oGraph[iLineX].end() - iInitialYSize;
+            int iPos = oReturnGraph[iLineX].size() - iInitialYSize;
+            int iStartSize = oReturnGraph[iLineX].size();
 
-            while (it != oGraph[iLineX].end())
+            while (iPos < iStartSize)
             {
-               oReturnGraph[iLineX].push_back(*it);
-               oReturnGraph[iLineX].back().weight<(9-i) ? oReturnGraph[iLineX].back().weight+=(i+1) : oReturnGraph[iLineX].back().weight=i;
-               it++;
+               oReturnGraph[iLineX].push_back(oReturnGraph[iLineX][iPos]);
+               oReturnGraph[iLineX].back().weight++;
+               oReturnGraph[iLineX].back().Y = iPos + iInitialYSize;
+               if (oReturnGraph[iLineX].back().weight>9)
+                oReturnGraph[iLineX].back().weight = 1;
+               iPos++;
+            }
+        }
+    }
+
+    /* Expand X 4 times */
+    for (size_t i = 0; i < 4; i++)
+    {
+        int iPos = oReturnGraph.size() - iInitialXSize;
+        int iStartSize = oReturnGraph.size();
+
+        for (size_t iLineX = iPos; iLineX < iStartSize; iLineX++)
+        {
+            oReturnGraph.push_back({});
+
+            for (auto &&pt : oReturnGraph[iLineX])
+            {
+                oReturnGraph.back().push_back(pt);
+                oReturnGraph.back().back().X = iLineX+iInitialXSize;
+                oReturnGraph.back().back().weight<9 ? oReturnGraph.back().back().weight++ : oReturnGraph.back().back().weight=1;
             }
         }
     }
@@ -134,27 +157,29 @@ int main(int argc, char const *argv[])
 {
     vector<vector<Point>> oGraph;
     vector<vector<Point>> oGraphBig;
-    list<Point*> qPointsToCheck;
+    queue<Point*> qPointsToCheck;
     Point* pLocal;
+    string spaces{80, ' '};
 
-    if (!siReadAndProcessInput("input_sample.txt", oGraph))
+    if (!siReadAndProcessInput("input.txt", oGraph))
     {
-        oGraphBig = expandGraph(oGraph);
-
-        for (auto &&line : oGraphBig)
+        for (auto &&line : oGraph)
         {
             for (auto &&elem : line)
                 cout << elem.weight;
             cout << endl;
         }
 
+        oGraph = expandGraph(oGraph);
+        cout << "New graph size is " << oGraph.size() << "x" << oGraph[0].size() << endl;
+
         oGraph[0][0].distance = 0;
-        qPointsToCheck.push_back(&oGraph[0][0]);
+        qPointsToCheck.push(&oGraph[0][0]);
 
         while (!qPointsToCheck.empty())
         {
             pLocal = qPointsToCheck.front();
-            //cout << "Processing point " << *pLocal << endl;
+            cout << "\r" << spaces << "\rPoints to check: " << qPointsToCheck.size() << flush;
 
             for (auto &&point : (*pLocal).getAdjacents(oGraph))
             {
@@ -166,17 +191,17 @@ int main(int argc, char const *argv[])
                     oGraph[point.X][point.Y].orig = &oGraph[pLocal->X][pLocal->Y];
                 }
 
-                if (find_if(qPointsToCheck.begin(), qPointsToCheck.end(), [point](Point* p){return p->X==point.X && p->Y==point.Y;}) == qPointsToCheck.end())
+                if (!oGraph[point.X][point.Y].bVisited)
                 {
-                    //cout << "Added " << &oGraph[point.X][point.Y] << " to the queue" << endl;
-                    qPointsToCheck.push_back(&oGraph[point.X][point.Y]);
+                    oGraph[point.X][point.Y].bVisited = true;
+                    qPointsToCheck.push(&oGraph[point.X][point.Y]);
                 }
             }
 
-            qPointsToCheck.pop_front();
+            qPointsToCheck.pop();
         }
 
-        cout << "Distance is " << oGraph.back().back().distance << endl;
+        cout << "\nDistance is " << oGraph.back().back().distance << endl;
     }
     else
     {
