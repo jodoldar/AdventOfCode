@@ -66,19 +66,12 @@ short int siReadAndProcessInput(string sFileName, string &sPacket)
 
 int64_t calculateResult(vector<int64_t> vecElems, int iType)
 {
-    cout << "\nWith type " << iType << ", Vec: [";
-    for (auto &&i : vecElems)
-    {
-        cout << i << ",";
-    }
-    cout << "\b]";
-
     switch (iType)
     {
     case 0:
-        return accumulate(vecElems.begin(), vecElems.end(), 0);
+        return accumulate(vecElems.begin(), vecElems.end(), (int64_t)0);
     case 1:
-        return accumulate(vecElems.begin(), vecElems.end(), 1, multiplies<int64_t>());
+        return accumulate(vecElems.begin(), vecElems.end(), (int64_t)1, multiplies<int64_t>());
     case 2:
         return *min_element(vecElems.begin(), vecElems.end());
     case 3:
@@ -101,12 +94,10 @@ int processPacket(string sPacket, int64_t& result)
     int iVersion = bin2dec(sPacket.substr(0,3));
     iVersionCount += iVersion;
     int iType = bin2dec(sPacket.substr(3,3));
-    //cout << "\nDetected packet with Version: " << iVersion << " and Type: " << iType;
 
     if (iType != 4)
     {   /* It's an operator */
         int iLenType = bin2dec(sPacket.substr(6,1));
-        //cout << "\tLenType is " << iLenType;
 
         /* List of subpackets values */
         vector<int64_t> vecElements;
@@ -114,7 +105,6 @@ int processPacket(string sPacket, int64_t& result)
         if (iLenType == 0)
         {
             int iSubPacketLen = bin2dec(sPacket.substr(7,15));
-            //cout << "\tSubPacket length is " << iSubPacketLen;
 
             int iInternalLen = 0;
             int64_t iReturnedVal = 0;
@@ -125,23 +115,18 @@ int processPacket(string sPacket, int64_t& result)
                     vecElements.push_back(iReturnedVal);
             }
 
-            //cout << "Finished subPacket with len " << iInternalLen;
-
             result = calculateResult(vecElements, iType);
-            cout << " Result is " << result << endl;
 
             return 22+iSubPacketLen;
         }
         else
         {
             int iNumOfSubPackets = bin2dec(sPacket.substr(7,11));
-            //cout << "\tNum of subPackets is " << iNumOfSubPackets;
 
             int iStartPos = 18;
             int64_t iReturnedVal = 0;
             for (size_t i = 0; i < iNumOfSubPackets; i++)
             {
-                //cout << "\tCheck SubPacket at " << iStartPos;
                 iStartPos+= processPacket(sPacket.substr(iStartPos), iReturnedVal);
 
                 if (iReturnedVal != INT64_MAX)
@@ -149,7 +134,6 @@ int processPacket(string sPacket, int64_t& result)
             }
 
             result = calculateResult(vecElements, iType);
-            cout << " Result is " << result << endl;
 
             return iStartPos;
         }
@@ -171,14 +155,11 @@ int processPacket(string sPacket, int64_t& result)
 
         result = bin2dec(sNumber);
 
-        cout << "\tNumber in packet is " << result << "\tSize is " << iLiteralPos;
-
         return iLiteralPos;
     }
 
     cout << endl;
 }
-
 
 int main(int argc, char const *argv[])
 {
@@ -199,12 +180,6 @@ int main(int argc, char const *argv[])
     {
         return 1;
     }
-
-    cout << "Size of int64 is " << sizeof(int64_t) << endl;
-    cout << "Size of intmax is " << sizeof(intmax_t) << endl;
-    cout << "Size of int is " << sizeof(int) << endl;
-    cout << "Size of long is " << sizeof(long) << endl;
-    cout << "Size of long long is " << sizeof(long long) << endl;
 
     return 0;
 }
