@@ -84,13 +84,15 @@ Advent of Code repository for the 2021 edition
  - **Day 15**: Done with C++ :heavy_check_mark:
    - Part 1 & 2 -> Custom implementation of Dijkstra algorithm. Some magic is happening in Part 2.
 
- - **Day 16**: :interrobang:
+ - **Day 16**: Done with C++ :heavy_check_mark:
+   - Part 1 & 2 -> Recursive parsing of the sub-packets done.
+
  - **Day 17**: :interrobang:
  - **Day 18**: :interrobang:
  - **Day 19**: :interrobang:
- - **Day 20**: :heavy_minus_sign:
- - **Day 21**: :heavy_minus_sign:
- - **Day 22**: :heavy_minus_sign:
- - **Day 23**: :heavy_minus_sign:
- - **Day 24**: :heavy_minus_sign:
- - **Day 25**: :heavy_minus_sign:
+ - **Day 20**: :interrobang:
+ - **Day 21**: :interrobang:
+ - **Day 22**: :interrobang:
+ - **Day 23**: :interrobang:
+ - **Day 24**: :interrobang:
+ - **Day 25**: :interrobang:
