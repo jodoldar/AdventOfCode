@@ -40,10 +40,10 @@ static inline std::string trim_copy(std::string s) {
     return s;
 }
 
-int bin2dec(std::string number)
+int64_t bin2dec(std::string number)
 {
-    int ret_value = 0;
-    int base = 1;
+    int64_t ret_value = 0;
+    int64_t base = 1;
 
     for (int i = number.length() - 1; i >= 0; i--)
     {

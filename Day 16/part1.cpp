@@ -1,7 +1,7 @@
 /**
  * @file part1.cpp
  * @author Josep Dols (jodoldar@gmail.com)
- * @brief Day 16 - Part 2 of the Advent of Code 2021
+ * @brief Day 16 - Part 1 of the Advent of Code 2021
  * @version 0.1
  * @date 2021-12-19
  * 
@@ -128,7 +128,6 @@ int processPacket(string sPacket)
 
     cout << endl;
 }
-
 
 int main(int argc, char const *argv[])
 {
