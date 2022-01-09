@@ -65,51 +65,50 @@ short int siReadAndProcessInput(string sFileName, string &sPacket)
     return 0;
 }
 
-int processPacket(string sPacket, int iPos)
+int processPacket(string sPacket)
 {
-    int iVersion = bin2dec(sPacket.substr(iPos,3));
+    int iVersion = bin2dec(sPacket.substr(0,3));
     iVersionCount += iVersion;
-    int iType = bin2dec(sPacket.substr(iPos+3,3));
-    cout << "\nDetected patcket with Version: " << iVersion << " and Type: " << iType;
+    int iType = bin2dec(sPacket.substr(3,3));
+    cout << "\nDetected packet with Version: " << iVersion << " and Type: " << iType;
 
     if (iType != 4)
-    {
-        int iLenType = bin2dec(sPacket.substr(iPos+6,1));
+    {   /* It's an operator */
+        int iLenType = bin2dec(sPacket.substr(6,1));
         cout << "\tLenType is " << iLenType;
 
         if (iLenType == 0)
         {
-            int iSubPacketLen = bin2dec(sPacket.substr(iPos+7,15));
+            int iSubPacketLen = bin2dec(sPacket.substr(7,15));
             cout << "\tSubPacket length is " << iSubPacketLen;
 
             int iInternalLen = 0;
 
             while (iInternalLen < iSubPacketLen)
-                iInternalLen += processPacket(sPacket, iPos+22+iInternalLen);
+                iInternalLen += processPacket(sPacket.substr(22+iInternalLen));
 
             cout << "Finished subPacket with len " << iInternalLen;
 
-            return 22+iInternalLen;
+            return 22+iSubPacketLen;
         }
         else
         {
-            int iNumOfSubPackets = bin2dec(sPacket.substr(iPos+7,11));
+            int iNumOfSubPackets = bin2dec(sPacket.substr(7,11));
             cout << "\tNum of subPackets is " << iNumOfSubPackets;
 
-            int iStartPos = iPos+18;
+            int iStartPos = 18;
             for (size_t i = 0; i < iNumOfSubPackets; i++)
             {
                 cout << "\tCheck SubPacket at " << iStartPos;
-                iStartPos+= processPacket(sPacket, iStartPos);
+                iStartPos+= processPacket(sPacket.substr(iStartPos));
             }
 
-            return 18+iStartPos;
+            return iStartPos;
         }
     }
-    else
+    else    /* It's a literal */
     {
-        int iLiteralPos = iPos + 6;
-        int iFinalPadding = 0;
+        int iLiteralPos = 6;
         string sNumber = "";
 
         while (true)
@@ -122,14 +121,14 @@ int processPacket(string sPacket, int iPos)
                 break;
         }
 
-        cout << "\tNumber in packet is " << bin2dec(sNumber) << "\tSize is " << iLiteralPos - iPos << endl;
+        cout << "\tNumber in packet is " << bin2dec(sNumber) << "\tSize is " << iLiteralPos;
 
-
-        return iLiteralPos - iPos;
+        return iLiteralPos;
     }
 
     cout << endl;
 }
+
 
 int main(int argc, char const *argv[])
 {
@@ -140,7 +139,7 @@ int main(int argc, char const *argv[])
         cout << "Packet to process is: " << sPacket << endl;
         iVersionCount = 0;
 
-        processPacket(sPacket, 0);
+        processPacket(sPacket);
 
         cout << "\nTotal versions account is " << iVersionCount << endl;
     }
