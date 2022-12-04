@@ -2,8 +2,8 @@
 Advent of Code repository of Josep
 
 ##  Current status (2022)
-- **Day 1**: :interrobang:
- - **Day 2**::interrobang:
+- **Day 1**: Done with C++ :heavy_check_mark:
+ - **Day 2**: Done with C++ :heavy_check_mark:
  - **Day 3**: :interrobang:
  - **Day 4**: :interrobang:
  - **Day 5**: :interrobang:
